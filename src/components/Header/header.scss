@@ -1,0 +1,21 @@
+@use '../../assets/styles/variables.scss' as *;
+
+.header {
+    background-color: $main-white;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 4px;
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__notification {
+        position: relative;
+        cursor: pointer;
+    }
+}

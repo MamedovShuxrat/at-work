@@ -1,0 +1,38 @@
+@use '../../assets/styles/variables.scss' as *;
+
+
+.favorite {
+    background: $accent-white;
+
+    &__inner {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    &__title {
+        color: $main-dark;
+        font-family: $main-fonts;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 33px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__message {
+        color: $accent-cyan;
+        font-family: $main-fonts;
+        text-align: center;
+        @include fsz20;
+    }
+}

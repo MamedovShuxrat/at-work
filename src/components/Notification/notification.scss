@@ -1,0 +1,94 @@
+@use '../../assets/styles/variables.scss' as *;
+
+.notification {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 310px;
+    height: 288px;
+    border-radius: 20px;
+
+    box-shadow: 0px 4px 25.8px 0px rgba(101, 100, 100, 0.25);
+    background: rgb(255, 255, 255);
+
+    padding: 30px 4px;
+    cursor: auto;
+    z-index: 10;
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border: none;
+        background: inherit;
+    }
+
+    &__title {
+        color: rgb(23, 23, 23);
+        @include fsz16;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-height: 200px;
+        overflow-y: auto;
+        background-color: #f9f9f9;
+
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+
+        &::-webkit-scrollbar-corner {
+            display: none;
+        }
+
+        &::-webkit-resizer {
+            display: none;
+        }
+    }
+
+    &__item {
+        padding: 10px 15px;
+        border: 1px solid rgb(220, 220, 220);
+
+        color: rgb(23, 23, 23);
+        @include fsz14;
+        margin-right: 6px;
+    }
+}
+
+@media (max-width:575px) {
+    .notification {
+        top: 30px;
+        right: -30px;
+        width: 300px;
+    }
+}
+
+@media (max-width:425px) {
+    .notification {
+        right: -60px;
+        width: 250px;
+    }
+}

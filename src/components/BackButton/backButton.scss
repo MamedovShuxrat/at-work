@@ -1,0 +1,20 @@
+@use '../../assets/styles/variables.scss' as *;
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &__text {
+        color: $main-gray;
+        font-family: $main-fonts;
+        @include fsz20;
+        transition: opacity ease-in-out .3s;
+    }
+
+    &:hover {
+        .back__text {
+            opacity: .7;
+        }
+    }
+}
