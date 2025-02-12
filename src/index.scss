@@ -37,3 +37,9 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+
+@media (max-width: 575px) {
+  .container {
+    padding: 0 16px;
+  }
+}
