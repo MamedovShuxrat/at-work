@@ -43,3 +43,15 @@ img {
     padding: 0 16px;
   }
 }
+
+@media (hover: none) and (pointer: coarse) {
+
+  a,
+  li,
+  button {
+    &:hover {
+      color: inherit;
+      transform: none;
+    }
+  }
+}
