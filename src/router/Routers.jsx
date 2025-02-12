@@ -8,9 +8,8 @@ const Routers = () => {
     return (
         <Routes>
             <Route path='/' element={<HomePage />} />
-            <Route path='/edit' element={<EditPage />} />
+            <Route path="/edit/:userId" element={<EditPage />} />
             <Route path='/favorite' element={<FavoritePage />} />
-
             <Route path='*' element={<Navigate to='/' />} />
         </Routes>
     );

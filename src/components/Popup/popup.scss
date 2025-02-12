@@ -1,0 +1,41 @@
+@use '../../assets/styles/variables.scss' as *;
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(22, 22, 22, 0.24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    &__content {
+        border-radius: 16px;
+        background: $main-white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 310px;
+        height: 211px;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__message {
+        margin-top: 32px;
+        color: $main-gray;
+        font-family: $main-fonts;
+        @include fsz20;
+    }
+
+    &__close {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+    }
+}

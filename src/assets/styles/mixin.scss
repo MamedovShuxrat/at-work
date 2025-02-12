@@ -10,6 +10,17 @@
     }
 }
 
+@mixin fsz18 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+
+    @media (max-width: 575px) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
 @mixin fsz16 {
     font-size: 16px;
     font-weight: 500;

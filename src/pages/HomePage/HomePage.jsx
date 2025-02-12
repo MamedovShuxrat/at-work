@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 import './homePage.scss'
-import cardImg from '../../assets/images/avatar.png'
 import Card from '../../components/Card/Card'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchUsers } from '../../store/slices/usersSlice'
-import LazyLoader from '../../components/LazyLoader/LazyLoader'
+import LazyLoader from '../../components/LazyLoaders/LazyLoader'
 
 const HomePage = () => {
     const dispatch = useDispatch()
@@ -12,8 +11,6 @@ const HomePage = () => {
     useEffect(() => {
         dispatch(fetchUsers())
     }, [dispatch])
-    console.log(activeUsers,);
-    console.log('status', status);
 
     return (
         <div className='home'>

@@ -1,0 +1,243 @@
+@use '../../assets/styles/variables.scss' as *;
+
+.edit-page {
+    background: $accent-white;
+
+    &__inner {
+        position: relative;
+        padding-top: 92px;
+    }
+
+    &__back {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 40px;
+        padding-bottom: 90px;
+    }
+
+    &__card {
+        padding: 40px;
+        border-radius: 16px;
+        background: rgb(253, 253, 253);
+        width: calc(30%);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__visual {
+        width: 100%;
+        height: 485px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        margin-top: auto;
+    }
+
+    &__profile {
+        color: #9c9c9c;
+        font-family: $main-fonts;
+        @include fsz16;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $accent-gray ;
+        margin-bottom: 24px;
+        cursor: pointer;
+
+        &-title {
+            color: $main-dark;
+            font-weight: 600;
+        }
+    }
+
+    &__form {
+        padding: 40px;
+        border-radius: 16px;
+        background: rgb(253, 253, 253);
+        width: calc(70%);
+
+    }
+}
+
+.form {
+    &__title {
+        color: $main-dark;
+        font-family: $main-fonts;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 33px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $accent-gray;
+        margin-bottom: 24px;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    &__desc {
+        color: $main-dark;
+        font-family: $main-fonts;
+        @include fsz18;
+    }
+
+    &__input {
+        border: 2px solid $accent-gray;
+        border-radius: 50px;
+        padding: 10px 16px;
+        outline: none;
+        width: 55%;
+
+        &:active {
+            border: 2px solid $accent-gray;
+        }
+    }
+
+    &__btn {
+        padding: 12px 42px;
+        color: $main-white;
+        font-family: $main-fonts;
+        @include fsz16;
+        text-align: center;
+
+        border-radius: 50px;
+
+        background: $main-dark;
+        transition: color ease-in .3s, background ease-in-out .3s;
+
+        &:hover {
+            color: $main-gray;
+            background: $accent-white;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .edit-page {
+        &__wrapper {
+            gap: 20px;
+        }
+
+        &__card {
+            padding: 30px;
+        }
+
+        &__form {
+            padding: 30px;
+        }
+
+        &__visual {
+            height: 405px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .edit-page {
+        &__wrapper {
+            gap: 20px;
+        }
+
+        &__card {
+            padding: 20px;
+        }
+
+        &__form {
+            padding: 20px;
+        }
+
+        &__visual {
+            height: 350px;
+        }
+
+        &__profile {
+            margin-bottom: 15px;
+        }
+    }
+
+    .form {
+        &__title {
+            margin-bottom: 15px;
+        }
+
+        &__field {
+            margin-bottom: 15px;
+        }
+
+        &__input {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .edit-page {
+        &__inner {
+            padding-top: 70px;
+        }
+
+        &__wrapper {
+            flex-wrap: wrap;
+            gap: 32px;
+            padding-bottom: 70px;
+        }
+
+        &__card {
+            padding: 28px;
+            width: 100%;
+        }
+
+        &__form {
+            padding: 28px;
+            width: 100%;
+
+        }
+
+        &__visual {
+            height: 187px;
+        }
+
+        &__profile {
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .form {
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__field {
+            margin-bottom: 20px;
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .form {
+        &__btn {
+            width: 100%;
+        }
+    }
+}
