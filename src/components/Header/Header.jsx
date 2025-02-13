@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import mainLogo from '../../assets/images/logo.png'
+import mainLogo from '../../assets/icons/main-logo.svg'
 import favoriteLogo from '../../assets/icons/Favorite.svg'
 import notificationLogo from '../../assets/icons/Notification.svg'
 import Notification from '../Notification/Notification'

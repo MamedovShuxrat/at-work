@@ -134,7 +134,9 @@
 
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 20px);
+        width: calc(50% - 10px);
+
+
     }
 
 }
@@ -154,6 +156,17 @@
         &__link {
             width: 144px;
         }
+
+        &__menu {
+            right: -20px;
+        }
+    }
+
+}
+
+@media(max-width:320px) {
+    .card__link {
+        width: 130px;
     }
 
 }

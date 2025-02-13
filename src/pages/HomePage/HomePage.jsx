@@ -33,16 +33,18 @@ const HomePage = () => {
                             )}
                         </div>
                     </section>
-                    <section className='home__archive'>
-                        <h2 className="home__title home__title-archive">Архив</h2>
-                        <div className="home__line"></div>
-                        <div className="cards archive">{
-                            archiveUser.map((user) => (
-                                <Card key={user.id} user={user} isArchived={true} />
-                            ))
-                        }
-                        </div>
-                    </section>
+                    {archiveUser.length > 0 && (
+                        <section className='home__archive'>
+                            <h2 className="home__title home__title-archive">Архив</h2>
+                            <div className="home__line"></div>
+                            <div className="cards archive">{
+                                archiveUser.map((user) => (
+                                    <Card key={user.id} user={user} isArchived={true} />
+                                ))
+                            }
+                            </div>
+                        </section>
+                    )}
                 </div>
             </div>
 

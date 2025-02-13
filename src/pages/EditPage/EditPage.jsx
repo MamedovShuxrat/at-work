@@ -37,7 +37,7 @@ const EditPage = () => {
         }
     }, [user])
     const handleChange = (e) => {
-        const { name, value } = e.target
+        const { name, value } = e.target;
         setFormData({
             ...formData,
             [name]: value,
@@ -55,6 +55,7 @@ const EditPage = () => {
             alert('Пожалуйста заполните все поля')
         }
     }
+
     const closePopup = () => {
         setIsPopupOpen(false)
     }
