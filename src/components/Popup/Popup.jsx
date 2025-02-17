@@ -2,7 +2,7 @@ import React from 'react'
 import closeIcon from '../../assets/icons/Cross.svg';
 import successImg from '../../assets/images/success.png'
 import './popup.scss'
-const Popup = ({ onClose }) => {
+const Popup = ({ message, onClose }) => {
     return (
         <div className='popup'>
             <div className="popup__content">

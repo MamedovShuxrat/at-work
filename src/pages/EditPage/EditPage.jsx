@@ -93,7 +93,7 @@ const EditPage = () => {
                                 </div>
                                 <div className="form__field">
                                     <label className='form__desc' htmlFor="email">Почта</label>
-                                    <input className='form__input' name="email" value={formData.email} onChange={handleChange} />
+                                    <input className='form__input' type="email" name="email" value={formData.email} onChange={handleChange} />
                                 </div>
                                 <div className="form__field">
                                     <label className='form__desc' htmlFor="city">Город</label>
@@ -101,7 +101,7 @@ const EditPage = () => {
                                 </div>
                                 <div className="form__field">
                                     <label className='form__desc' htmlFor="phone">Телефон</label>
-                                    <input className='form__input' name="phone" value={formData.phone} onChange={handleChange} />
+                                    <input className='form__input' type="tel" name="phone" value={formData.phone} onChange={handleChange} />
                                 </div>
                                 <div className="form__field">
                                     <label className='form__desc' htmlFor="companyName">Название компании</label>
@@ -113,7 +113,7 @@ const EditPage = () => {
                     </div>
                 )}
             </div>
-            {isPopupOpen && <Popup message="Данные успешно сохранены!" onClose={closePopup} />}
+            {isPopupOpen && <Popup onClose={closePopup} />}
         </div>
 
     )
